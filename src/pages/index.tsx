@@ -18,8 +18,12 @@ export default function Home() {
             </Head>
             <main>
                 <Navbar title="Finanzas">
-                    <NavbarAction href="/listado">Lista</NavbarAction>
-                    <NavbarAction href="/dashboard">Graficos</NavbarAction>
+                    <NavbarAction href="/listado" active={true}>
+                        Lista
+                    </NavbarAction>
+                    <NavbarAction href="/dashboard" active={false}>
+                        Graficos
+                    </NavbarAction>
                 </Navbar>
             </main>
         </>

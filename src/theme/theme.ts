@@ -6,9 +6,14 @@ export interface ThemeMediaQuery {
     sm: string;
 }
 
+export interface ColorVariation {
+    main: string;
+    accent: string;
+}
+
 export interface Theme {
-    primary: string;
-    secondary: string;
+    primary: ColorVariation;
+    secondary: ColorVariation;
     mediaquery: ThemeMediaQuery;
 }
 
@@ -21,8 +26,14 @@ export const BREAKPOINTS = {
 };
 
 const theme: Theme = {
-    primary: '#f72585',
-    secondary: '#4cc9f0',
+    primary: {
+        main: '#30475E ',
+        accent: '#7E8A97 ',
+    },
+    secondary: {
+        main: '#CBAF87 ',
+        accent: '#E7DEC8 ',
+    },
     mediaquery: {
         xxl: `@media (min-width: ${BREAKPOINTS.xxl}px)`,
         xl: `@media (min-width: ${BREAKPOINTS.xl}px)`,
