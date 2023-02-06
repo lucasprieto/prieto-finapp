@@ -1,4 +1,4 @@
-import styled, { StyledComponent } from '@emotion/styled';
+import styled from '@emotion/styled';
 import Link, { LinkProps } from 'next/link';
 
 export interface NavbarActionProps extends LinkProps {

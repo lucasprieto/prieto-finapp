@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Bitter } from '@next/font/google';
 
-import { Container } from '../Container';
+import { Container } from '@/components/Container';
 
 const bitter = Bitter({ weight: '700', subsets: ['latin'] });
 
@@ -12,7 +12,6 @@ export interface NavbarProps {
 
 const NavbarWrapper = styled.header(({ theme }) => ({
     padding: '10px',
-    borderBottom: '1px solid gray',
     display: 'flex',
     justifyContent: 'center',
     flexWrap: 'wrap',
