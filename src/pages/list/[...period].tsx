@@ -1,33 +1,21 @@
 import { Layout } from '@/components/Layout';
 import { MonthTabs } from '@/components/MonthTabs';
-import { getGastos } from '@/mocks/gastos';
-import { Expense } from '@/model';
 import { GetServerSidePropsContext } from 'next';
 import Head from 'next/head';
-import { useRouter } from 'next/router';
-
-type ListPeriodQuery = {
-    period: string[];
-};
 
 interface ListPeriodProps {
-    expenses: Expense[];
+    month: number;
+    year: number;
 }
 
-export default function ListPeriod({}: ListPeriodProps) {
-    const { query } = useRouter();
-    const [year, month] = (query as ListPeriodQuery).period;
+export default function ListPeriod({ year, month }: ListPeriodProps) {
     return (
         <>
             <Head>
                 <title>Finanzas | Lista</title>
             </Head>
             <Layout>
-                <MonthTabs
-                    path="/list"
-                    year={parseInt(year)}
-                    month={parseInt(month)}
-                >
+                <MonthTabs path="/list" year={year} month={month}>
                     asd
                 </MonthTabs>
             </Layout>
@@ -35,7 +23,16 @@ export default function ListPeriod({}: ListPeriodProps) {
     );
 }
 
-export async function getServerSideProps(context: GetServerSidePropsContext) {
-    const expenseData = await getGastos();
-    return { expenses: expenseData.expenses };
+type ListPeriodParams = {
+    period: string[];
+};
+
+export function getServerSideProps(context: GetServerSidePropsContext) {
+    const { period } = context.params as ListPeriodParams;
+    return {
+        props: {
+            month: parseInt(period[1]),
+            year: parseInt(period[0]),
+        },
+    };
 }

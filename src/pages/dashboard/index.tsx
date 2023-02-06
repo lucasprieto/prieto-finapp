@@ -1,7 +1,15 @@
-import { useRouter } from 'next/router';
+import { GetServerSidePropsContext } from 'next';
 
-export default function Dashboard() {
-    const router = useRouter();
+export default function Dashboard() {}
+
+export function getServerSideProps(context: GetServerSidePropsContext) {
     const today = new Date();
-    router.replace(`/dashboard/${today.getFullYear()}/${today.getMonth() + 1}`);
+    return {
+        redirect: {
+            permanent: false,
+            destination: `/dashboard/${today.getFullYear()}/${
+                today.getMonth() + 1
+            }`,
+        },
+    };
 }

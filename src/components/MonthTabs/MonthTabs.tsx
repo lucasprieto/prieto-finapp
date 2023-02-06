@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { useRouter } from 'next/router';
 import MonthTabsButton from './TabButton';
 
 const MONTHS = [
@@ -48,8 +47,6 @@ export interface TabsProps {
 }
 
 const MonthTabs: React.FC<TabsProps> = ({ path, year, month, children }) => {
-    const { asPath, ...rest } = useRouter();
-    console.log(rest);
     return (
         <TabsGrid>
             <MonthsColumn>

@@ -8,10 +8,6 @@ export default function Document() {
                     name="description"
                     content="Aplicacion de finanzas de la familia Prieto"
                 />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1"
-                />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <body>
