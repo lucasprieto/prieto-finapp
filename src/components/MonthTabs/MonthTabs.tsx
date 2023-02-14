@@ -17,9 +17,9 @@ const MONTHS = [
 ];
 
 const TabsGrid = styled('div')({
-    marginTop: 20,
+    marginTop: 10,
     display: 'grid',
-    gridTemplateColumns: 'minmax(100px, 1fr) 6fr',
+    gridTemplateColumns: 'minmax(140px, 1fr) 6fr',
     minHeight: 600,
     height: '85vh',
     overflow: 'hidden',
@@ -31,6 +31,8 @@ const TabsGrid = styled('div')({
 const MonthPanel = styled('div')({
     height: '100%',
     overflowY: 'auto',
+    paddingLeft: 20,
+    paddingRight: 20,
 });
 
 const MonthsColumn = styled('div')({

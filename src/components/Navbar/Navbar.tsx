@@ -16,6 +16,7 @@ const NavbarWrapper = styled.header(({ theme }) => ({
     justifyContent: 'center',
     flexWrap: 'wrap',
     alignItems: 'center',
+    marginTop: 10,
 }));
 
 const NavbarTitle = styled.span({
