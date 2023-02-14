@@ -1,5 +1,6 @@
 import { getAllExpensesByPeriod } from '@/apis';
 import { BalanceTable } from '@/components/BalanceTable';
+import { Card } from '@/components/Card';
 import { DetailLayout, Layout } from '@/components/Layout';
 import { MonthTabs } from '@/components/MonthTabs';
 import { BlockSpinner } from '@/components/Spinner';
@@ -29,7 +30,7 @@ export default function ListPeriod({ year, month }: ListPeriodProps) {
                             <BalanceTable items={data} />
                         )}
                     </MonthTabs>
-                    <div style={{ background: 'red', height: 300 }}></div>
+                    <Card>asd</Card>
                 </DetailLayout>
             </Layout>
         </>

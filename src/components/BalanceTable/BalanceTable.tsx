@@ -23,6 +23,9 @@ const TableRow = styled.tr({
     ':nth-of-type(odd)': {
         backgroundColor: 'rgba(0,0,0,.05)',
     },
+    ':hover': {
+        backgroundColor: 'rgba(0,0,0,.1)',
+    },
 });
 const TableFooter = styled.tfoot({
     position: 'sticky',
